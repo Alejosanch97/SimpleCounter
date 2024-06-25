@@ -4,6 +4,7 @@ import Contador from "./Contador";
 //create your first component
 const Home = ({
 	segundos,
+	segundero,
 	minutos,
 	horas,
 	dias,
@@ -13,6 +14,7 @@ const Home = ({
 		<>
 			<Contador
 				segundos={segundos}
+				segundero={segundero}
 				minutos={minutos}
 				horas={horas}
 				dias={dias}

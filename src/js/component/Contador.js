@@ -2,6 +2,7 @@ import React from "react";
 
 const Contador = ({
 	segundos,
+	segundero,
 	minutos,
 	horas,
 	dias,
@@ -25,7 +26,10 @@ const Contador = ({
 					<div className="col-2 ventana dos bg-dark m-3 d-flex justify-content-center align-items-center">
 						<p> {minutos} min</p>
 					</div>
-					<div className="col-2 ventana uno bg-dark m-3 d-flex justify-content-center align-items-center">
+					<div className="col-1 ventana uno bg-dark m-3 d-flex justify-content-center align-items-center">
+						<p>{segundero} </p>
+					</div>
+					<div className="col-1 ventana uno bg-dark m-3 d-flex justify-content-center align-items-center">
 						<p>{segundos} s</p>
 					</div>
 				</div>

@@ -9,6 +9,7 @@ import "../styles/index.css";
 import Home from "./component/home.jsx";
 
 let segundos = 0;
+let segundero = 0;
 let minutos = 0;
 let horas = 0;
 let dias = 0;
@@ -17,6 +18,7 @@ let intervaloAnterior; // Para almacenar el intervalo anterior
 
 const resetearContador = () => {
 	segundos = -1;
+	segundero = 0;
 	minutos = 0;
 	horas = 0;
 	dias = 0;
@@ -29,9 +31,14 @@ const inputContador = () => {
 
 const incrementar = setInterval(() => {
 	segundos++;
-	if (segundos === 60) {
-		minutos++;
+
+	if (segundos === 10) {
+		segundero++;
 		segundos = 0;
+	}
+	if (segundero === 6) {
+		minutos++;
+		segundero = 0;
 	}
 	if (minutos === 60) {
 		horas++;
@@ -46,6 +53,7 @@ const incrementar = setInterval(() => {
 	ReactDOM.render(
 		<Home
 			segundos={segundos}
+			segundero={segundero}
 			minutos={minutos}
 			horas={horas}
 			dias={dias}
